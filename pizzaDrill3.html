@@ -1,196 +1,160 @@
 <!DOCTYPE html>
 <html>
 <head>
-	
-
+	<title>Pizza Order Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 	<link rel="stylesheet" href="./css/pizzaDrill.css">
 </head>
 <body>
 
-<fomr class="orderMenu">
+<header>
+	<div class="container text-center header-content">
+</header>
+<div>
+		<nav class="container-fluid text-center">
+			<h1> Papa's Pizza</h1>
+		</nav>
+</div>
 
-	<div class="size">
-		<h3>Size:</h3>
-			<input class="size" type="radio" name="size" value="Personal">Personal</input><br>
-			<input class="size" type="radio" name="size" value="Medium" checked>Medium</input><br>
-			<input class="size" type="radio" name="size" value="Large" >Large</input><br>
-			<input class="size" type="radio" name="size" value="Extra Large">Extra Large</input><br>
+<br>
+
+<form class="orderMenu">
+	<div class="container">
+		<div class="row row-eq-height-md">
+			<div class="col-lg-4 col-md-6 section">
+				<div class="size box">
+					<h3 class="text-center">Size</h3>
+						<div class="inputs">
+							<input class="size" type="radio" name="size" value="Personal">
+								<a href="#" data-toggle="tooltip" title="$6">Personal</a></input><br>
+							<input class="size" type="radio" name="size" value="Medium" checked>
+								<a href="#" data-toggle="tooltip" title="$10">Medium</a></input><br>
+							<input class="size" type="radio" name="size" value="Large">
+								<a href="#" data-toggle="tooltip" title="$14">Large</a></input><br>
+							<input class="size" type="radio" name="size" value="Extra Large">
+								<a href="#" data-toggle="tooltip" title="$16">Extra Large</a></input><br>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 section">
+				<div class="meat box">
+					<h3 class="text-center">Meat</h3>
+						<div class="inputs">
+							<input class="meat" type="checkbox" name="meat" value="Pepperoni">
+								<a href="#" data-toggle="tooltip" title="$1/each after first meat">Pepperoni</a></input><br>
+							<input class="meat" type="checkbox" name="meat" value="Sausage">
+								<a href="#" data-toggle="tooltip" title="$1/each after first meat">Sausage</a></input><br>
+							<input class="meat" type="checkbox" name="meat" value="Canadian Bacon">
+								<a href="#" data-toggle="tooltip" title="$1/each after first meat">Canadian Bacon</a></input><br>
+							<input class="meat" type="checkbox" name="meat" value="Ground Beef">
+								<a href="#" data-toggle="tooltip" title="$1/each after first meat">Ground Beef</a></input><br>
+							<input class="meat" type="checkbox" name="meat" value="Anchovy">
+								<a href="#" data-toggle="tooltip" title="$1/each after first meat">Anchovy</a></input><br>
+							<input class="meat" type="checkbox" name="meat" value="Chicken">
+								<a href="#" data-toggle="tooltip" title="$1/each after first meat">Chicken</a></input><br>
+						</div>
+				</div>
+			</div>
+
+
+			<div class="col-lg-4 col-md-6 section">
+				<div class="cheese box">
+					<h3 class="text-center">Cheese</h3>
+						<div class="inputs">
+							<input class="cheese" type="radio" name="cheese" value="Regular" checked>Regular</input><br>
+							<input class="cheese" type="radio" name="cheese" value="No Cheese">No Cheese</input><br>
+							<input class="cheese" type="radio" name="cheese" value="Extra Cheese">
+								<a href="#" data-toggle="tooltip" title="+$3">Extra Cheese</a></input><br>
+						</div>
+				</div>
+			</div>
+		</div>
+<br>
+		<div class="row row-eq-height-md">
+			<div class="col-lg-4 col-md-6 section">
+				<div class="crust box">
+					<h3 class="text-center">Crust</h3>
+						<div class="inputs">
+							<input class="crust" type="radio" name="crust" checked value="Plain" >Plain Crust</input><br>
+							<input class="crust" type="radio" name="crust" value="Garlic Butter">Garlic Butter Crusst</input><br>
+							<input class="crust" type="radio" name="crust" value="Cheese Stuffed" >
+								<a href="#" data-toggle="tooltip" title="+$3">Cheese Stuffed Crust</a></input><br>
+							<input class="crust" type="radio" name="crust" value="Spicy" >Spicy Crust</input><br>
+							<input class="crust" type="radio" name="crust" value="House Special" >House Special Crust</input><br>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 section">
+				<div class="sauce box">
+					<h3 class="text-center">Sauce</h3>
+						<div class="inputs">
+							<input class="sauce" type="radio" name="sauce" value="Marinara Sauce" checked>Marinara Sauce</input><br>
+							<input class="sauce" type="radio" name="sauce" value="White Sauce">While Sauce</input><br>
+							<input class="sauce" type="radio" name="sauce" value="BBQ Sauce">BBQ Sauce</input><br>
+							<input class="sauce" type="radio" name="sauce" value="No Sauce">No Sauce</input><br>
+						</div>
+				</div>
+			</div>
+
+			<div class="col-lg-4 col-md-6 section">
+				<div class="veggies box">
+					<h3 class="text-center">Vegetables</h3>
+						<div class="inputs">
+							<input class="veggies" type="checkbox" name="veggies" value="Tomatoes">
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Tomatoes</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Onions" >
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Onions</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Olives" >
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Olives</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Green Peppers">
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Green Peppers</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Mushrooms" >
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Mushrooms</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Pineapple" >
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Pineapple</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Spinach">
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Spinach</a></input><br>
+							<input class="veggies" type="checkbox" name="veggies" value="Jalapeno" >
+								<a href="#" data-toggle="tooltip" title="$1/each after first vegetable">Jalapeno</a></input><br>
+						</div>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 
-	<div class="meat">
-		<h3>Meat:</h3>
-			<input class="meat" type="checkbox" name="meat" value="Pepperoni">Pepperoni</input><br>
-			<input class="meat" type="checkbox" name="meat" value="Sausage">Sausage</input><br>
-			<input class="meat" type="checkbox" name="meat" value="Canadian Bacon">Canadian Bacon</input><br>
-			<input class="meat" type="checkbox" name="meat" value="Ground Beef">Ground Beef</input><br>
-			<input class="meat" type="checkbox" name="meat" value="Anchovy">Anchovy</input><br>
-			<input class="meat" type="checkbox" name="meat" value="Chicken">Chicken</input><br>
+<br>
+
+<div class="container text-center">
+	<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="Calc()">
+		Place Order</button>
+	<button  class="btn btn-info btn-lg" onclick="clear()">
+		Clear Order</button>
+</div>
+</form> 
+
+<div id="myModal" class="modal fade" role="dialog">	
+	<div class="modal-dialog">
+		<div class="modal-content">
+			 <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		        <h4 class="modal-title">Thank you for your Order!</h4>
+		     </div>
+		     <div class="modal-body">
+					<div id="order"></div>
+					<div id="total"></di>
+			</div>
+
+		</div>	
 	</div>
+</div>
 
-	<div class="cheese">
-		<h3>Cheese:</h3>
-			<input class="cheese" type="radio" name="cheese" value="Regular" checked>Regular</input><br>
-			<input class="cheese" type="radio" name="cheese" value="No Cheese">No Cheese</input><br>
-			<input class="cheese" type="radio" name="cheese" value="Extra Cheese">Extra Cheese</input><br>
-	</div>	
-
-	<div class="crust">
-		<h3>Crust:</h3>
-			<input class="crust" type="radio" name="crust" checked value="Plain" >Plain Crust</input><br>
-			<input class="crust" type="radio" name="crust" value="Garlic Butter">Garlic Butter Crusst</input><br>
-			<input class="crust" type="radio" name="crust" value="Cheese Stuffed" >Cheese Stuffed Crust</input><br>
-			<input class="crust" type="radio" name="crust" value="Spicy" >Spicy Crust</input><br>
-			<input class="crust" type="radio" name="crust" value="House Special" >House Special Crust</input><br>
-	</div>
-
-	<div class="sauce">
-		<h3>Sauce:</h3>
-			<input class="sauce" type="radio" name="sauce" value="Marinara Sauce" checked>Marinara Sauce</input><br>
-			<input class="sauce" type="radio" name="sauce" value="White Sauce">While Sauce</input><br>
-			<input class="sauce" type="radio" name="sauce" value="BBQ Sauce">BBQ Sauce</input><br>
-			<input class="sauce" type="radio" name="sauce" value="No Sauce">No Sauce</input><br>
-	</div>
-
-	<div class="veggies">
-		<h3>Veggies:</h3>
-			<input class="veggies" type="checkbox" name="veggies" value="Tomatoes">Tomatoes</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Onions" >Onions</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Olives" >Olives</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Green Peppers">Green Peppers</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Mushrooms" >Mushrooms</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Pineapple" >Pineapple</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Spinach">Spinach</input><br>
-			<input class="veggies" type="checkbox" name="veggies" value="Jalapeno" >Jalapeno</input><br>
-	</div>
-
-<button onclick ="Calc()"> Order</button>
-
-</form>	
-		<div id="order"></div>
-		<div id="total"></di>
-	
-
-<script>
-
-		
-
-	function Calc() {
-		var order = "<h3>Order: </h3>";
-		var sum = 0;
-		var sizePrice = 0;
-		var sizeArray = document.getElementsByClassName("size");
-
-		for (var i = 0; i< sizeArray.length; i++) {
-			if (sizeArray[i].checked) {
-				var selectedSize = sizeArray[i].value;
-				order = (order +  selectedSize + "<br>");
-			}
-		}
-		if (selectedSize === "Personal") {
-			sizePrice = 6;
-		} else if (selectedSize === "Medium") {
-			sizePrice = 10;
-		} else if (selectedSize === "Large") {
-			sizePrice = 14;
-		} else if (selectedSize === "Extra Large") {
-			sizePrice = 16;
-		}
-		sum += sizePrice;
-		getMeat(sum,order);
-	};
-
-	function getMeat(sum,order) {
-		var meatPrice = 0;
-		var selectedMeat = [];
-		var meatArray = document.getElementsByClassName("meat");
-
-		for (var j = 0; j <meatArray.length; j++) {
-			if (meatArray[j].checked) {
-				selectedMeat.push(meatArray[j].value);
-				order = (order + meatArray[j].value + "<br>");
-			}
-		}
-		var meatCount = selectedMeat.length;
-		if (meatCount>1) {
-			meatPrice = (meatCount - 1);
-		} else {
-			meatPrice = 0;
-		}
-		sum+= meatPrice;
-		getCheese(sum,order);
-	};
-
-	function getCheese(sum,order) {
-		var cheesePrice = 0;
-		var cheeseArray = document.getElementsByClassName("cheese");
-
-		for (k = 0; k < cheeseArray.length; k++) {
-			if(cheeseArray[k].checked){
-				var selectedCheese = cheeseArray[k].value;
-				order = (order + selectedCheese + "<br>");
-			}
-		}
-		if (selectedCheese === "Extra Cheese") {
-			cheesePrice = 3;
-		} else {
-			cheesePrice = 0;
-		}
-		sum += cheesePrice;
-		getCrust(sum,order);
-	};
-
-	function getCrust(sum,order) {
-		var crustPrice = 0;
-		var crustArray = document.getElementsByClassName("crust");
-
-		for(var l = 0; l < crustArray.length; l++) {
-			if(crustArray[l].checked) {
-				var selectedCrust = crustArray[l].value;
-				order = (order + selectedCrust + "<br>");
-			}
-		}
-		if(selectedCrust === "Cheese Stuffed") {
-			crustPrice = 3;
-		} else {
-			crustPrice = 0;
-		}
-		sum += crustPrice;
-		getSauce(sum,order);
-	};
-
-	function getSauce(sum,order) {
-		var sauceArray = document.getElementsByClassName("sauce");
-
-		for ( var m = 0; m<sauceArray.length; m++){
-			if(sauceArray[m].checked) {
-				var selectedSauce = sauceArray[m].value;
-				order  = (order + selectedSauce + "<br>");
-			}
-		}
-		getVeg(sum,order);
-	};
-
-	function getVeg(sum,order) {
-		var vegPrice = 0;
-		var selectedVeg = [];
-		var vegArray = document.getElementsByClassName("veggies");
-
-		for ( var n = 0; n<vegArray.length; n++) {
-			if (vegArray[n].checked) {
-				selectedVeg.push(vegArray[n].value);
-				order = order + vegArray[n].value + "<br>";		
-			}
-		}
-		var vegCount = selectedVeg.length;
-		if (vegCount>1){
-			vegPrice = (vegCount - 1);
-		} else {
-			vegPrice = 0;
-		}
-		sum += vegPrice;
-		document.getElementById("order").innerHTML = order;
-		document.getElementById("total").innerHTML = "<h3>Total: <strong>$"+ sum +".00"+"</strong></h3";
-	};
-
-</script>
+<script src="./js/pizzaDrill.js"></script>
 </body>
 </html>
