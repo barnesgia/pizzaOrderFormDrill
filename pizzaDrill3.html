@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+
+</head>
+<body>
+
+<fomr class="orderMenu">
+
+	<div class="size">
+		<h3>Size:</h3>
+			<input class="size" type="radio" name="size" value="Personal">Personal</input><br>
+			<input class="size" type="radio" name="size" value="Medium" checked>Medium</input><br>
+			<input class="size" type="radio" name="size" value="Large" >Large</input><br>
+			<input class="size" type="radio" name="size" value="Extra Large">Extra Large</input><br>
+	</div>
+
+	<div class="meat">
+		<h3>Meat:</h3>
+			<input class="meat" type="checkbox" name="meat" value="Pepperoni">Pepperoni</input><br>
+			<input class="meat" type="checkbox" name="meat" value="Sausage">Sausage</input><br>
+			<input class="meat" type="checkbox" name="meat" value="Canadian Bacon">Canadian Bacon</input><br>
+			<input class="meat" type="checkbox" name="meat" value="Ground Beef">Ground Beef</input><br>
+			<input class="meat" type="checkbox" name="meat" value="Anchovy">Anchovy</input><br>
+			<input class="meat" type="checkbox" name="meat" value="Chicken">Chicken</input><br>
+	</div>
+
+	<div class="cheese">
+		<h3>Cheese:</h3>
+			<input class="cheese" type="radio" name="cheese" value="Regular" checked>Regular</input><br>
+			<input class="cheese" type="radio" name="cheese" value="No Cheese">No Cheese</input><br>
+			<input class="cheese" type="radio" name="cheese" value="Extra Cheese">Extra Cheese</input><br>
+	</div>	
+
+	<div class="crust">
+		<h3>Crust:</h3>
+			<input class="crust" type="radio" name="crust" checked value="Plain" >Plain Crust</input><br>
+			<input class="crust" type="radio" name="crust" value="Garlic Butter">Garlic Butter Crusst</input><br>
+			<input class="crust" type="radio" name="crust" value="Cheese Stuffed" >Cheese Stuffed Crust</input><br>
+			<input class="crust" type="radio" name="crust" value="Spicy" >Spicy Crust</input><br>
+			<input class="crust" type="radio" name="crust" value="House Special" >House Special Crust</input><br>
+	</div>
+
+	<div class="sauce">
+		<h3>Sauce:</h3>
+			<input class="sauce" type="radio" name="sauce" value="Marinara Sauce" checked>Marinara Sauce</input><br>
+			<input class="sauce" type="radio" name="sauce" value="White Sauce">While Sauce</input><br>
+			<input class="sauce" type="radio" name="sauce" value="BBQ Sauce">BBQ Sauce</input><br>
+			<input class="sauce" type="radio" name="sauce" value="No Sauce">No Sauce</input><br>
+	</div>
+
+	<div class="veggies">
+		<h3>Veggies:</h3>
+			<input class="veggies" type="checkbox" name="veggies" value="Tomatoes">Tomatoes</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Onions" >Onions</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Olives" >Olives</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Green Peppers">Green Peppers</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Mushrooms" >Mushrooms</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Pineapple" >Pineapple</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Spinach">Spinach</input><br>
+			<input class="veggies" type="checkbox" name="veggies" value="Jalapeno" >Jalapeno</input><br>
+	</div>
+
+<button onclick ="Calc()"> Order</button>
+
+</form>	
+		<div id="order"></div>
+		<div id="total"></di>
+	
+
+<script>
+
+		
+
+	function Calc() {
+		var order = "<h3>Order: </h3>";
+		var sum = 0;
+		var sizePrice = 0;
+		var sizeArray = document.getElementsByClassName("size");
+
+		for (var i = 0; i< sizeArray.length; i++) {
+			if (sizeArray[i].checked) {
+				var selectedSize = sizeArray[i].value;
+				order = (order +  selectedSize + "<br>");
+			}
+		}
+		if (selectedSize === "Personal") {
+			sizePrice = 6;
+		} else if (selectedSize === "Medium") {
+			sizePrice = 10;
+		} else if (selectedSize === "Large") {
+			sizePrice = 14;
+		} else if (selectedSize === "Extra Large") {
+			sizePrice = 16;
+		}
+		sum += sizePrice;
+		getMeat(sum,order);
+	};
+
+	function getMeat(sum,order) {
+		var meatPrice = 0;
+		var selectedMeat = [];
+		var meatArray = document.getElementsByClassName("meat");
+
+		for (var j = 0; j <meatArray.length; j++) {
+			if (meatArray[j].checked) {
+				selectedMeat.push(meatArray[j].value);
+				order = (order + meatArray[j].value + "<br>");
+			}
+		}
+		var meatCount = selectedMeat.length;
+		if (meatCount>1) {
+			meatPrice = (meatCount - 1);
+		} else {
+			meatPrice = 0;
+		}
+		sum+= meatPrice;
+		getCheese(sum,order);
+	};
+
+	function getCheese(sum,order) {
+		var cheesePrice = 0;
+		var cheeseArray = document.getElementsByClassName("cheese");
+
+		for (k = 0; k < cheeseArray.length; k++) {
+			if(cheeseArray[k].checked){
+				var selectedCheese = cheeseArray[k].value;
+				order = (order + selectedCheese + "<br>");
+			}
+		}
+		if (selectedCheese === "Extra Cheese") {
+			cheesePrice = 3;
+		} else {
+			cheesePrice = 0;
+		}
+		sum += cheesePrice;
+		getCrust(sum,order);
+	};
+
+	function getCrust(sum,order) {
+		var crustPrice = 0;
+		var crustArray = document.getElementsByClassName("crust");
+
+		for(var l = 0; l < crustArray.length; l++) {
+			if(crustArray[l].checked) {
+				var selectedCrust = crustArray[l].value;
+				order = (order + selectedCrust + "<br>");
+			}
+		}
+		if(selectedCrust === "Cheese Stuffed") {
+			crustPrice = 3;
+		} else {
+			crustPrice = 0;
+		}
+		sum += crustPrice;
+		getSauce(sum,order);
+	};
+
+	function getSauce(sum,order) {
+		var sauceArray = document.getElementsByClassName("sauce");
+
+		for ( var m = 0; m<sauceArray.length; m++){
+			if(sauceArray[m].checked) {
+				var selectedSauce = sauceArray[m].value;
+				order  = (order + selectedSauce + "<br>");
+			}
+		}
+		getVeg(sum,order);
+	};
+
+	function getVeg(sum,order) {
+		var vegPrice = 0;
+		var selectedVeg = [];
+		var vegArray = document.getElementsByClassName("veggies");
+
+		for ( var n = 0; n<vegArray.length; n++) {
+			if (vegArray[n].checked) {
+				selectedVeg.push(vegArray[n].value);
+				order = order + vegArray[n].value + "<br>";		
+			}
+		}
+		var vegCount = selectedVeg.length;
+		if (vegCount>1){
+			vegPrice = (vegCount - 1);
+		} else {
+			vegPrice = 0;
+		}
+		sum += vegPrice;
+		document.getElementById("order").innerHTML = order;
+		document.getElementById("total").innerHTML = "<h3>Total: <strong>$"+ sum +".00"+"</strong></h3";
+	};
+
+</script>
+</body>
+</html>
