@@ -53,14 +53,20 @@ h3{
 	padding-top:10px;
 	background-color: #148f6a;
 	color: #fff;
+	border-radius: 10px;
 }
 
-.btn-info {
+.btn-danger {
 	background-color: #ab131b;
 	border-color: #df1e39;
 }
 
-.btn-info:hover, .btn-info::selection, .btn-info:focus, .btn-info:active {
+.btn-danger:hover, .btn-danger::selection, .btn-danger:focus, .btn-danger:active {
 	background-color: #df1e39;
 	border-color: #ab131b;
 }
+
+.inputs {
+	border-radius: 0px 0px 10px 10px;
+}
+
